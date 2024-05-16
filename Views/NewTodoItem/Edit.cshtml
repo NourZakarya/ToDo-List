@@ -1,0 +1,50 @@
+﻿@model ListItem
+<h1>Edit</h1>
+@* <form method="post" action="/NewTodoItem/SaveEdit">
+    <input type="hidden" value="@Model.Id" />
+    <div class="form-group">
+        <label for="formGroupTitle">Title:</label>
+        <input type="text" name="Title" value="@Model.Title" class="form-control" id="formGroupTitle" placeholder="Title">
+    </div>
+    <div class="form-group">
+        <label for="formGroupDescription">Description:</label>
+        <input type="text" name="Description" value="@Model.Description" class="form-control" id="formGroupDescription" placeholder="Description">
+    </div>
+    <div class="cs-form">
+        <label for="formGroupDeadLine">DeadLine:</label>
+        <input type="date" name="DeadLine" value="@Model.DeadLine" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form> *@
+
+@* @using (Html.BeginForm("SaveEdit", "NewTodoItem", FormMethod.Post))
+{
+    @Html.HiddenFor(e=>e.Id)
+
+    @Html.LabelFor(e=>e.Title)
+    @Html.TextBoxFor(e => e.Title, new { placeholder = "Enter Title", @class = "form-control"})
+
+    @Html.LabelFor(e => e.Description)
+    @Html.TextBoxFor(e => e.Description, new { placeholder = "Enter Description", @class = "form-control" })
+
+    @Html.LabelFor(e => e.DeadLine)
+    @Html.TextBoxFor(e => e.DeadLine, new { placeholder = "Enter DeadLine", @class = "form-control" })
+
+    <button type="submit" class="btn btn-primary">Save</button>
+} *@
+
+@* <form asp-controller="NewTodoItem" asp-action="SaveEdit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+       <label asp-for="Title"></label>
+       <input class="form-control" asp-for="Title" />
+
+    <label asp-for="Description"></label>
+    <input class="form-control" asp-for="Description" />
+
+    <label asp-for="DeadLine"></label>
+    <input class="form-control" asp-for="DeadLine" />
+    
+    <button type="submit" class="btn btn-primary">Save</button>
+    </form> *@
+<partial name="_CreateEditToDoPartial.cshtml" />

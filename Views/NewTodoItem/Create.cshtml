@@ -1,0 +1,31 @@
+﻿@using ToDoList.ViewModel
+@model ListItemViewModel
+<h1>Create New</h1>
+<h3>List Item</h3>
+<form method="post" action="/NewTodoItem/CreateNew">
+    <div class="form-group">
+        <label for="formGroupTitle">Title:</label>
+        <input type="text" asp-for="Title" class="form-control" placeholder="Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+        <br />
+    </div>
+    <div class="form-group">
+        <label for="formGroupDescription">Description:</label>
+        <input type="text" asp-for="Description" class="form-control" placeholder="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <br />
+    </div>
+    <div class="cs-form">
+        <label for="formGroupDeadLine">DeadLine:</label>
+        <input type="date" asp-for="DeadLine" class="form-control" />
+        <span asp-validation-for="DeadLine" class="text-danger"></span>
+        <br />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+
+    @section Scripts {
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    }
+</form>

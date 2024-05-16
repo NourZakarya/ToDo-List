@@ -1,0 +1,15 @@
+﻿@model ListItem
+<form asp-controller="NewTodoItem" asp-action="SaveEdit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+       <label asp-for="Title"></label>
+       <input class="form-control" asp-for="Title" />
+
+    <label asp-for="Description"></label>
+    <input class="form-control" asp-for="Description" />
+
+    <label asp-for="DeadLine"></label>
+    <input class="form-control" asp-for="DeadLine" />
+    
+    <button type="submit" class="btn btn-primary">Save</button>
+    </form>

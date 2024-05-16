@@ -1,0 +1,32 @@
+﻿@model List<ListItem>
+<h1>Welcome</h1>
+Here is your to-do list.
+<br />
+<a href="\NewTodoItem\Create">Create New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+
+
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                    <td>@item.DeadLine</td>
+                    <td><a href="\NewTodoItem\Edit\?id=@item.Id">edit</a>// <a href="\NewTodoItem\Delete\?id=@item.Id">Delete</a> </td>
+                </tr>
+            }
+        }
+
+
+    </tbody>
+</table>
